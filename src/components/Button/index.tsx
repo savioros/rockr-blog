@@ -1,4 +1,4 @@
-import { ButtonContainer } from './styles'
+import * as S from './styles'
 
 interface ButtonProps{
   name: string
@@ -6,9 +6,9 @@ interface ButtonProps{
 
 function Button({ name }: ButtonProps) {
   return (
-    <ButtonContainer>
+    <S.ButtonContainer>
       {name}
-    </ButtonContainer>
+    </S.ButtonContainer>
   )
 }
 

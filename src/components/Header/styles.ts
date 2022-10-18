@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { pixelToRem } from "../../utils/pixelToRem";
 
-export const Container = styled.div`
+export const HeaderContainer = styled.header`
     background-color: #2D2D2D;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 `
 
-export const HeaderStyle = styled.header`
+export const HeaderStyle = styled.div`
     background-color: #2D2D2D;
     max-width: ${pixelToRem(1200)};
     margin: 0 auto;

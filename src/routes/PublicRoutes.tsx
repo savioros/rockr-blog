@@ -9,7 +9,7 @@ function PublicRoutes() {
         <Route path='' element={<Home/>}/>
         <Route path='post/:id' element={<Home/>}/>
         <Route path='newpost' element={<Home/>}/>
-        <Route path='*' element={<Home/>}/>
+        <Route path='*' element={<h1>Existe Não pvt</h1>}/>
       </Route>
     </Routes>
   )

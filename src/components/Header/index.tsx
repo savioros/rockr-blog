@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Button from '../Button'
-import { Container, HeaderStyle } from './styles'
+import * as S from './styles'
 import { HiOutlineMenu, HiOutlineMenuAlt3 } from 'react-icons/hi'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -17,8 +17,8 @@ function Header() {
   }
 
   return (
-    <Container>
-      <HeaderStyle>
+    <S.HeaderContainer>
+      <S.HeaderStyle>
         <h1>Rockr Blog</h1>
         <nav>
           <button onClick={activeMenu}>
@@ -36,8 +36,8 @@ function Header() {
               <Button name='New Post' /> 
           </ul>
         </nav>
-      </HeaderStyle>
-    </Container>
+      </S.HeaderStyle>
+    </S.HeaderContainer>
   )
 }
 

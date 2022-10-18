@@ -1,10 +1,12 @@
-import Header from '../../components/Header'
+import { useEffect } from 'react'
+import Card from '../../components/Card'
+import * as S from './styles'
 
 function Home() {
   return (
-    <main>
-        olaaaaaa
-    </main>
+    <S.Container>
+      <Card/>
+    </S.Container>
   )
 }
 
