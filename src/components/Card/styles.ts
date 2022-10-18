@@ -6,6 +6,20 @@ export const Container = styled.ul`
     grid-auto-rows: 250px;
     grid-auto-flow: dense;
     row-gap: 50px;
+
+    @media(max-width: 1200px){
+        &{
+            grid-template-columns: 1fr;
+            padding: 0 40px 40px;
+        }
+    }
+
+    @media(max-width: 768px){
+        &{
+            /* display: flex;
+            flex-direction: column; */
+        }
+    }
 `
 
 export const CardWrapper = styled.li`
@@ -16,27 +30,36 @@ export const CardWrapper = styled.li`
     background-color: var(--white-color);
     transition: .2s ease-out;
 
-    &:nth-child(3n){
+    &:nth-child(3n), &:nth-child(6n){
         grid-column: span 2;
         grid-row: span 2;
+        width: 1000px;
+    }
+
+    &:nth-child(3n){
+        justify-self: end;
+    }
+
+    &:nth-child(6n){
+        justify-self: start;
     }
 
     img{
-        width: 100%;
-        min-width: 320px;
+        width: 40%;
         height: 100%;
         object-fit: cover;
     }
 
     div{
+        width: 60%;
         padding: 40px;
 
-        p{
+        h2, p{
             max-width: 25ch;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 5;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
         }
 
@@ -51,5 +74,14 @@ export const CardWrapper = styled.li`
         right: 20px;
         bottom: 10px;
         font-size: 24px;
+    }
+
+    @media(max-width: 1200px){
+        &:nth-child(3n), &:nth-child(6n){
+            grid-column: initial;
+            grid-row: initial;
+            justify-self: stretch;
+            width: 100%;
+        }
     }
 `
