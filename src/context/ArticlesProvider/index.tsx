@@ -16,7 +16,7 @@ interface IContext {
     loading: boolean
     articles: IArticle[]
     selectedArticle: IArticle | undefined
-    getArticle: () => Promise<void>
+    getArticle: (page: number) => Promise<void>
     postArticle: () => Promise<void>
     viewArticle: (id: string | undefined) => Promise<void>
 }
@@ -32,10 +32,14 @@ export function ArticlesProvider({ children }: IArtcilesProvider){
     const [articles, setArticles] = useState<IArticle[]>([])
     const [selectedArticle, setSelectedArticle] = useState<IArticle | undefined>()
 
-    async function getArticle() {
+    async function getArticle(page: number) {
         setLoading(true)
-        const response = await Api.get('articles')
-        setArticles(response.data)
+        const response = await Api.get(`articles?_page=${page}`)
+
+        let payload = [...articles, ...response.data]
+        
+        console.log(payload)
+        setArticles(payload)
         setLoading(false)
     }
 

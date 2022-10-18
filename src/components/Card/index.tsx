@@ -1,17 +1,29 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import useArticles from '../../context/ArticlesProvider/useArticles'
 import * as S from './styles'
 import { MdOutlineDoubleArrow } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
-import Loading from '../Loading'
 
 function Card() {
     const { articles, getArticle } = useArticles()
     const navigate = useNavigate()
-    const { loading } = useArticles()
+    const [page, setPage] = useState(1)
+    const infinitScrollRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        getArticle()
+        getArticle(page)
+    }, [page])
+
+    useEffect(() => {
+        const intersectionObserver = new IntersectionObserver((entries) => {
+            if(entries.some((entry) => entry.isIntersecting)){
+                setPage((prevState) => prevState + 1)
+            }
+        })
+
+        if(infinitScrollRef.current) intersectionObserver.observe(infinitScrollRef.current)
+
+        return () => intersectionObserver.disconnect()
     }, [])
 
     function selectArticle(id: string){
@@ -20,7 +32,7 @@ function Card() {
 
     return (
         <S.Container>
-            {loading ? <Loading/> : articles.map(({ id, author, title, article, imageUrl }) => {
+            {articles.map(({ id, author, title, article, imageUrl }) => {
                 return <S.CardWrapper key={id}>
                     <img src={imageUrl} alt="" />
                     <div>
@@ -33,6 +45,7 @@ function Card() {
                     </button>
                 </S.CardWrapper>
             })}
+            <div ref={infinitScrollRef}/>
         </S.Container>
     )
 }
