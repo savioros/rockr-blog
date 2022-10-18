@@ -5,6 +5,10 @@ export const Container = styled.section`
     max-width: 1170px;
     height: max-content;
     background-color: var(--white-color);
+
+    @media(max-width: 1200px){
+        width: 70%;
+    }
 `
 
 export const FirstLine = styled.div`
@@ -12,10 +16,11 @@ export const FirstLine = styled.div`
     align-items: center;
 
     img{
-        width: 100%;
+        width: 50%;
     }
 
     div{
+        width: 50%;
         padding: 120px;
 
         span{
@@ -33,8 +38,50 @@ export const FirstLine = styled.div`
             color: var(--yellow-color);
         }
     }
+
+    @media(max-width: 1200px){
+        &{
+            div{
+                padding: 40px;
+
+                h2{
+                    max-width: 25ch;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 850px){
+        &{
+            flex-direction: column;
+
+            img, div{
+                width: 100%
+            }
+
+            div{
+                padding: 40px;
+            }
+        }
+    }
 `
 
 export const SecondLine = styled.div`
     padding: 120px 250px;
+
+    @media(max-width: 1200px){
+        &{
+            padding: 120px 40px;
+        }
+
+        p{
+            text-align: justify;
+        }
+    }
+
+    @media(max-width: 850px){
+        &{
+            padding: 0 40px;
+        }
+    }
 `
