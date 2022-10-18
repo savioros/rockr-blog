@@ -1,14 +1,20 @@
 import { useEffect } from 'react'
-import { useArticles } from '../../context/ArticlesProvider/useArticles'
+import useArticles from '../../context/ArticlesProvider/useArticles'
 import * as S from './styles'
 import { MdOutlineDoubleArrow } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 function Card() {
     const { articles, getArticle } = useArticles()
+    const navigate = useNavigate()
 
     useEffect(() => {
         getArticle()
     }, [])
+
+    function selectArticle(id: string){
+        navigate(`article/${id}`)
+    }
 
     return (
         <S.Container>
@@ -20,7 +26,7 @@ function Card() {
                         <h2>{title}</h2>
                         <p>{article.split('<p>').join('').split('</p>')}</p>
                     </div>
-                    <button>
+                    <button onClick={() => selectArticle(id)}>
                         <MdOutlineDoubleArrow/>
                     </button>
                 </S.CardWrapper>
