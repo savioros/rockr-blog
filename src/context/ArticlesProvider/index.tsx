@@ -13,6 +13,7 @@ interface IArticle {
 }
 
 interface IContext {
+    loading: boolean
     articles: IArticle[]
     selectedArticle: IArticle | undefined
     getArticle: () => Promise<void>
@@ -27,24 +28,29 @@ interface IArtcilesProvider {
 export const ArticlesContext = createContext({} as IContext)
 
 export function ArticlesProvider({ children }: IArtcilesProvider){
+    const [loading, setLoading] = useState(false)
     const [articles, setArticles] = useState<IArticle[]>([])
     const [selectedArticle, setSelectedArticle] = useState<IArticle | undefined>()
 
     async function getArticle() {
+        setLoading(true)
         const response = await Api.get('articles')
         setArticles(response.data)
+        setLoading(false)
     }
 
     async function postArticle() {
     }
 
     async function viewArticle(id: string | undefined) {
+        setLoading(true)
         const response = await Api.get(`articles/${id}`)
         setSelectedArticle(response.data)
+        setLoading(false)
     }
 
     return(
-        <ArticlesContext.Provider value={{ articles, selectedArticle, getArticle, postArticle, viewArticle }}>
+        <ArticlesContext.Provider value={{ loading, articles, selectedArticle, getArticle, postArticle, viewArticle }}>
             {children}
         </ArticlesContext.Provider>
     )

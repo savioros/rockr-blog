@@ -11,8 +11,6 @@ function Article() {
         viewArticle(id)
     }, [id])
 
-    console.log(selectedArticle)
-
     return (
         <S.Container>
             <S.FirstLine>

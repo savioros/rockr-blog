@@ -13,13 +13,6 @@ export const Container = styled.ul`
             padding: 0 40px 40px;
         }
     }
-
-    @media(max-width: 768px){
-        &{
-            /* display: flex;
-            flex-direction: column; */
-        }
-    }
 `
 
 export const CardWrapper = styled.li`

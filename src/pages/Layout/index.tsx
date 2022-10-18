@@ -10,7 +10,6 @@ function Layout() {
         <ArticlesProvider>
           <Outlet/>
         </ArticlesProvider>
-        <Footer/>
     </>
   )
 }
