@@ -1,19 +1,16 @@
 import { useState } from 'react'
-import Button from '../Button'
+import ButtonNewPost from '../Buttons/ButtonNewPost'
 import * as S from './styles'
 import { HiOutlineMenu, HiOutlineMenuAlt3 } from 'react-icons/hi'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import useArticles from '../../context/ArticlesProvider/useArticles'
 
 function Header() {
   const [menuMobile, setMenuMobile] = useState(false)
-  const navigate = useNavigate()
+  const { addModal } = useArticles()
 
   function activeMenu(){
     setMenuMobile(!menuMobile)
-  }
-
-  function newPost(){
-    navigate('/newpost')
   }
 
   return (
@@ -31,9 +28,9 @@ function Header() {
                 </Link>  
               </li>
               <li>
-                <button>Contact</button>
+                <button onClick={addModal}>Contact</button>
               </li>
-              <Button name='New Post' /> 
+              <ButtonNewPost name='New Post' /> 
           </ul>
         </nav>
       </S.HeaderStyle>

@@ -37,6 +37,25 @@ export const HeaderStyle = styled.div`
             li a, li > button{
                 font: var(--semi-bold-font);
             }
+
+            li{
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: .3s ease-out;
+                }
+
+                &:hover::after{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                }
+            }
         }
     }
 

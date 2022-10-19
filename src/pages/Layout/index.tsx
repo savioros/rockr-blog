@@ -1,15 +1,18 @@
 import { Outlet } from 'react-router-dom'
 import Footer from '../../components/Footer'
+import FormModal from '../../components/FormModal'
 import Header from '../../components/Header'
-import { ArticlesProvider } from '../../context/ArticlesProvider'
+import useArticles from '../../context/ArticlesProvider/useArticles'
 
 function Layout() {
+  const { openModal } = useArticles()
+  
   return (
     <>
         <Header/>
-        <ArticlesProvider>
-          <Outlet/>
-        </ArticlesProvider>
+        <Outlet/>
+        <Footer/>
+        {openModal && <FormModal/>}
     </>
   )
 }

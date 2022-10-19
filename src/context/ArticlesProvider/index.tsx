@@ -1,34 +1,12 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, useState } from "react";
 import { Api } from "../../services/api";
-/* import { IContext, IArticlesProvider, IArticles } from "./types"; */
-
-interface IArticle {
-    id: string
-    author: string
-    authorEmail: string
-    title: string
-    article: string
-    date: string
-    imageUrl: string
-}
-
-interface IContext {
-    loading: boolean
-    articles: IArticle[]
-    selectedArticle: IArticle | undefined
-    getArticle: (page: number) => Promise<void>
-    postArticle: () => Promise<void>
-    viewArticle: (id: string | undefined) => Promise<void>
-}
-
-interface IArtcilesProvider {
-    children: ReactNode
-}
+import { IArticle, IContext, IArtcilesProvider } from "./types";
 
 export const ArticlesContext = createContext({} as IContext)
 
 export function ArticlesProvider({ children }: IArtcilesProvider){
     const [loading, setLoading] = useState(false)
+    const [openModal, setOpenModal] = useState(false)
     const [articles, setArticles] = useState<IArticle[]>([])
     const [selectedArticle, setSelectedArticle] = useState<IArticle | undefined>()
 
@@ -38,7 +16,6 @@ export function ArticlesProvider({ children }: IArtcilesProvider){
 
         let payload = [...articles, ...response.data]
         
-        console.log(payload)
         setArticles(payload)
         setLoading(false)
     }
@@ -53,30 +30,17 @@ export function ArticlesProvider({ children }: IArtcilesProvider){
         setLoading(false)
     }
 
+    function addModal(){
+        setOpenModal(true)
+    }
+
+    function closeModal(){
+        setOpenModal(false)
+    }
+
     return(
-        <ArticlesContext.Provider value={{ loading, articles, selectedArticle, getArticle, postArticle, viewArticle }}>
+        <ArticlesContext.Provider value={{ loading, openModal, addModal, closeModal, articles, selectedArticle, getArticle, postArticle, viewArticle }}>
             {children}
         </ArticlesContext.Provider>
     )
 }
-
-/* export const ArticlesContext = createContext<IContext>({} as IContext)
-
-export function ArticlesProvider({ children }: IArticlesProvider){
-    const [articles, setArticles] = useState<IArticles | null>()
-
-    async function getArticle() {
-        const response = await Api.get('articles')
-        setArticles(response.data)
-    }
-
-    async function postArticle() {
-
-    }
-
-    return(
-        <ArticlesContext.Provider value={{ articles, getArticle, postArticle }}>
-            {children}
-        </ArticlesContext.Provider>
-    )
-} */

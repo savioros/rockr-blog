@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 
     :root{
         --normal-font: 400 ${pixelToRem(12)}/${pixelToRem(22)} 'Rubik', sans-serif;
-        --semi-bold-font: 500 ${pixelToRem(20)}/${pixelToRem(26)} 'Rubik', sans-serif;
+        --semi-bold-font: 500 ${pixelToRem(18)}/${pixelToRem(26)} 'Rubik', sans-serif;
         --bold-font: 700 ${pixelToRem(24)}/${pixelToRem(31)} 'Rubik', sans-serif;
 
         --white-color: #fff;

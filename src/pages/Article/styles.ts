@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
     margin: 120px auto 100px auto;
     max-width: 1170px;
+    min-height: 100vh;
     height: max-content;
     background-color: var(--white-color);
 
@@ -82,6 +83,10 @@ export const SecondLine = styled.div`
     @media(max-width: 850px){
         &{
             padding: 0 40px;
+        }
+
+        p{
+            padding: 0 0 20px 0;
         }
     }
 `

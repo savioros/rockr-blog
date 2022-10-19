@@ -67,6 +67,11 @@ export const CardWrapper = styled.li`
         right: 20px;
         bottom: 10px;
         font-size: 24px;
+        transition: .2s ease-out;
+
+        &:hover{
+            transform: scale(1.3);
+        }
     }
 
     @media(max-width: 1200px){
