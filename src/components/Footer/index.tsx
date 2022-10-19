@@ -2,9 +2,7 @@ import * as S from './styles'
 
 function Footer() {
   return (
-    <S.Container>
-        Footer
-    </S.Container>
+    <S.Container>Todos os direitos reservados</S.Container>
   )
 }
 
