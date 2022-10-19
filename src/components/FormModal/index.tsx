@@ -2,7 +2,7 @@ import ButtonForm from '../Buttons/ButtonForm'
 import Input from '../Inputs/Input'
 import TextArea from '../Inputs/TextArea'
 import * as S from './styles'
-import Send from '../../assets/send.svg'
+import { AiOutlineSend } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
 import useArticles from '../../context/ArticlesProvider/useArticles'
 
@@ -39,7 +39,7 @@ function FormModal() {
                         type="text"
                     />
                     <TextArea labelName='Post' placeholder='Hello...' rows={7}/>
-                    <ButtonForm name="Submit" icon={Send} />
+                    <ButtonForm name="Submit" icon={<AiOutlineSend/>} />
                 </form>
             </S.Container>
         </S.Overlay>

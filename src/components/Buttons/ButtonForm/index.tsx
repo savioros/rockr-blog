@@ -1,14 +1,16 @@
+import { ReactNode } from 'react'
+import { IconType } from 'react-icons'
 import * as S from './styles'
 
 interface ButtonFormProps{
     name: string
-    icon: string
+    icon: ReactNode
 }
 
 function ButtonForm({ name, icon }: ButtonFormProps) {
   return (
     <S.ButtonStyle>
-        <img src={icon} alt="" />
+        {icon}
         {name}
     </S.ButtonStyle>
   )
