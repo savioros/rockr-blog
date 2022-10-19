@@ -5,6 +5,7 @@ import * as S from './styles'
 import { AiOutlineSend } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
 import useArticles from '../../context/ArticlesProvider/useArticles'
+import { Form } from '../Form/styles'
 
 function FormModal() {
     const { closeModal } = useArticles()
@@ -22,7 +23,7 @@ function FormModal() {
                         <IoCloseOutline/>
                     </button>
                 </S.HeaderModal>
-                <form>
+                <Form>
                     <Input 
                         labelName='Name' 
                         placeholder="Fill your full name" 
@@ -40,7 +41,7 @@ function FormModal() {
                     />
                     <TextArea labelName='Post' placeholder='Hello...' rows={7}/>
                     <ButtonForm name="Submit" icon={<AiOutlineSend/>} />
-                </form>
+                </Form>
             </S.Container>
         </S.Overlay>
   )

@@ -1,4 +1,4 @@
-import styled, { isStyledComponent } from "styled-components";
+import styled from "styled-components";
 
 export const Overlay = styled.div`
     position: fixed;
@@ -26,14 +26,6 @@ export const Container = styled.div`
     h2{
         font: var(--bold-font);
         color: var(--yellow-color);
-    }
-
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-top: 50px;
     }
 `
 

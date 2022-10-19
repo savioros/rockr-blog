@@ -11,7 +11,6 @@ export interface IArticle {
 }
 
 export interface IContext {
-    loading: boolean
     openModal: boolean
     addModal: () => void
     closeModal: () => void
