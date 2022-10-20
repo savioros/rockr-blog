@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { pixelToRem } from "../../../utils/pixelToRem";
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: ${pixelToRem(4)};
     width: 100%;
 
     span{
         color: red;
-        height: 19px;
+        height: ${pixelToRem(19)};
     }
 `
 
@@ -18,5 +19,5 @@ export const Label = styled.label`
 `
 
 export const TextAreaStyle = styled.textarea`
-    padding: 16px 0 16px 18px;
+    padding: ${pixelToRem(16, 0, 16, 18)};
 `

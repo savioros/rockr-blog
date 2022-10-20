@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { pixelToRem } from "../../utils/pixelToRem";
 
 export const Overlay = styled.div`
     position: fixed;
@@ -21,7 +22,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: ${pixelToRem(50)};
 
     h2{
         font: var(--bold-font);
@@ -42,6 +43,6 @@ export const HeaderModal = styled.header`
         position: absolute;
         top: 20px;
         right: 20px;
-        font-size: 32px;
+        font-size: ${pixelToRem(32)};
     }
 `

@@ -85,7 +85,7 @@ export const HeaderStyle = styled.div`
                 }
 
                 li{
-                    padding: 20px 40px;
+                    padding: ${pixelToRem(20, 40)};
                 }
             }  
         }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { pixelToRem } from "../../utils/pixelToRem";
 
 export const Container = styled.section`
     margin: 120px auto 100px auto;
@@ -22,7 +23,7 @@ export const FirstLine = styled.div`
 
     div{
         width: 50%;
-        padding: 120px;
+        padding: ${pixelToRem(120)};
 
         span{
             font: var(--normal-font);
@@ -43,7 +44,7 @@ export const FirstLine = styled.div`
     @media(max-width: 1200px){
         &{
             div{
-                padding: 40px;
+                padding: ${pixelToRem(40)};
 
                 h2{
                     max-width: 25ch;
@@ -61,18 +62,18 @@ export const FirstLine = styled.div`
             }
 
             div{
-                padding: 40px;
+                padding: ${pixelToRem(40)};
             }
         }
     }
 `
 
 export const SecondLine = styled.div`
-    padding: 120px 250px;
+    padding: ${pixelToRem(120, 250)};
 
     @media(max-width: 1200px){
         &{
-            padding: 120px 40px;
+            padding: ${pixelToRem(120, 40)};
         }
 
         p{
@@ -82,11 +83,11 @@ export const SecondLine = styled.div`
 
     @media(max-width: 850px){
         &{
-            padding: 0 40px;
+            padding: ${pixelToRem(0, 40)};
         }
 
         p{
-            padding: 0 0 20px 0;
+            padding: ${pixelToRem(0, 0, 20, 0)};
         }
     }
 `

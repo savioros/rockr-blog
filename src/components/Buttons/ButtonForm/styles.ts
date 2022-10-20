@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import { pixelToRem } from "../../../utils/pixelToRem";
 
 export const ButtonStyle = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: ${pixelToRem(20)};
     background-color: var(--black-color);
     color: #fff;
-    padding: 10px 30px;
+    padding: ${pixelToRem(10, 30)};
     font: var(--semi-bold-font);
-    border-radius: 4px;
+    border-radius: ${pixelToRem(4)};
     transition: .2s ease-out;
 
     &:hover{

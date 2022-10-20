@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { pixelToRem } from "../../utils/pixelToRem";
 
 export const Container = styled.ul`
     display: grid;
@@ -45,7 +46,7 @@ export const CardWrapper = styled.li`
 
     div{
         width: 60%;
-        padding: 40px;
+        padding: ${pixelToRem(40)};
 
         h2, p{
             max-width: 25ch;
