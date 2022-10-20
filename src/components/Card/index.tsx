@@ -38,7 +38,7 @@ function Card() {
                     <div>
                         <p>{author}</p>
                         <h2>{title}</h2>
-                        <p>{article.split('<p>').join('').split('</p>')}</p>
+                        <p>{article.split('<p>').join('').split('</p>').join('')}</p>
                     </div>
                     <button onClick={() => selectArticle(id)}>
                         <MdOutlineDoubleArrow/>

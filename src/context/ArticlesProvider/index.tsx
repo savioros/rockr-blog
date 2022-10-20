@@ -12,20 +12,32 @@ export function ArticlesProvider({ children }: IArtcilesProvider){
     const [selectedArticle, setSelectedArticle] = useState<IArticle | undefined>()
 
     async function getArticle(page: number) {
-        const response = await Api.get(`articles?_page=${page}`)
-
-        let payload = [...articles, ...response.data]
-        
-        setArticles(payload)
+        try {
+            const response = await Api.get(`articles?_page=${page}`)
+    
+            let payload = [...articles, ...response.data]
+            
+            setArticles(payload)
+        } catch (error) {
+            console.error('Error GetArticle', error)
+        }
     }
 
-    async function postArticle(data: object) {
-        await Api.post('articles', data)
+    function postArticle(data: object) {
+        try {
+            Api.post('articles', data)
+        } catch (error) {
+            console.error('Error PostArticle', error)
+        }
     }
 
     async function viewArticle(id: string | undefined) {
-        const response = await Api.get(`articles/${id}`)
-        setSelectedArticle(response.data)
+        try {
+            const response = await Api.get(`articles/${id}`)
+            setSelectedArticle(response.data)
+        } catch (error) {
+            console.error('Error ViewArticle', error)
+        }
     }
 
     function sendEmail(data: IFormInputs){

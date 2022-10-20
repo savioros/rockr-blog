@@ -18,7 +18,7 @@ export interface IContext {
     articles: IArticle[]
     selectedArticle: IArticle | undefined
     getArticle: (page: number) => Promise<void>
-    postArticle: (data: object) => Promise<void>
+    postArticle: (data: object) => void
     viewArticle: (id: string | undefined) => Promise<void>
     sendEmail: (data: IFormInputs) => void
 }
