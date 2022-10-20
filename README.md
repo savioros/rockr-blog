@@ -34,9 +34,10 @@ Finally, we have a page where the user can create new posts.
 
 ## Project images
 
-### 1 - Upon entering, you will see the page to choose profiles
+### 1 - Home Page
 
-![profilePage](https://user-images.githubusercontent.com/77650278/191383629-33903f64-2f62-4c3a-afd8-28e205574b51.png)
+![home](https://user-images.githubusercontent.com/77650278/197029875-d0898af8-449e-432a-aa5b-639532cbdca2.png)
+![homeMobile](https://user-images.githubusercontent.com/77650278/197029900-5000e5b0-ac09-49a4-8b2a-81f77aed3cb3.png)
 
 ### 2 - Create profile page
 
