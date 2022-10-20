@@ -1,16 +1,12 @@
+import { IInputProps } from '../../../types/types'
 import * as S from './styles'
 
-interface TextAreaProps{
-    labelName: string 
-    placeholder: string
-    rows: number
-}
-
-function TextArea({ labelName, placeholder, rows }: TextAreaProps) {
+function TextArea({ labelName, name, placeholder, rows, register, error }: IInputProps) {
   return (
     <S.Container>
         <S.Label htmlFor={labelName}>{labelName}</S.Label>
-        <S.TextAreaStyle placeholder={placeholder} rows={rows}/>
+        <S.TextAreaStyle {...register(name)} placeholder={placeholder} rows={rows}/>
+        <span>{error}</span>
     </S.Container>
   )
 }

@@ -7,7 +7,7 @@ import useArticles from '../../context/ArticlesProvider/useArticles'
 
 function Header() {
   const [menuMobile, setMenuMobile] = useState(false)
-  const { addModal } = useArticles()
+  const { openModal } = useArticles()
 
   function activeMenu(){
     setMenuMobile(!menuMobile)
@@ -28,7 +28,7 @@ function Header() {
                 </Link>  
               </li>
               <li>
-                <button onClick={addModal}>Contact</button>
+                <button onClick={openModal}>Contact</button>
               </li>
               <ButtonNewPost name='New Post' /> 
           </ul>

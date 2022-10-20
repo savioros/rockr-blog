@@ -27,6 +27,10 @@ export const Container = styled.div`
         font: var(--bold-font);
         color: var(--yellow-color);
     }
+
+    @media(max-width: 700px){
+        width: 90%;
+    }
 `
 
 export const HeaderModal = styled.header`

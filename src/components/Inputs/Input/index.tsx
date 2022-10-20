@@ -1,16 +1,12 @@
+import { IInputProps } from '../../../types/types'
 import * as S from './styles'
 
-interface InputProps{
-  labelName: string 
-  placeholder: string
-  type: string
-}
-
-function Input({ labelName, placeholder, type }: InputProps) {
+function Input({ labelName, name, placeholder, type, register, error }: IInputProps) {
   return (
     <S.Container>
         <S.Label htmlFor={labelName}>{labelName}</S.Label>
-        <S.InputStyle id={labelName} type={type} placeholder={placeholder}/>
+        <S.InputStyle {...register(name, {required: true})} id={labelName} type={type} placeholder={placeholder}/>
+        <span>{error}</span>
     </S.Container>
   )
 }

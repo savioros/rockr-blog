@@ -5,14 +5,14 @@ import Header from '../../components/Header'
 import useArticles from '../../context/ArticlesProvider/useArticles'
 
 function Layout() {
-  const { openModal } = useArticles()
+  const { modal } = useArticles()
   
   return (
     <>
         <Header/>
         <Outlet/>
         <Footer/>
-        {openModal && <FormModal/>}
+        {modal && <FormModal/>}
     </>
   )
 }
