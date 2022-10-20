@@ -39,30 +39,25 @@ Finally, we have a page where the user can create new posts.
 ![home](https://user-images.githubusercontent.com/77650278/197029875-d0898af8-449e-432a-aa5b-639532cbdca2.png)
 ![homeMobile](https://user-images.githubusercontent.com/77650278/197029900-5000e5b0-ac09-49a4-8b2a-81f77aed3cb3.png)
 
-### 2 - Create profile page
+### 2 - Contact Modal
 
-![newProgilePage](https://user-images.githubusercontent.com/77650278/191383651-386b91ba-e220-4de1-aa49-57c451b5b66a.png)
+![contactForm](https://user-images.githubusercontent.com/77650278/197029995-00a31882-28cc-464b-812f-2db357d66def.png)
+![errorsContactForm](https://user-images.githubusercontent.com/77650278/197030018-f8b468e3-90a9-4375-8f1f-b482577b16c7.png)
 
-### 3 - When accessing a profile and entering the home page :D
+### 3 - Article Page
 
-![homePage](https://user-images.githubusercontent.com/77650278/191383665-ace4c83d-db6d-43a1-8972-e21cc24d328a.png)
+![article](https://user-images.githubusercontent.com/77650278/197029923-4430cda2-b9e6-4e93-9d48-a727f8cfbabb.png)
+![articleMobile](https://user-images.githubusercontent.com/77650278/197029935-65fcb875-d2cc-4586-bbc7-60a08dc4a657.png)
 
-### 4 - By clicking on a movie we can see its information - Desktop
+### 4 - New Post Page
 
-![modalDesktop](https://user-images.githubusercontent.com/77650278/191383675-d407d08f-4037-4715-bb5b-b46bda3ec65f.png)
-
-### 5 - Home page in its mobile version
-
-![mobileHomePage](https://user-images.githubusercontent.com/77650278/191383696-6399a000-7f12-4116-b217-19bef860cda5.png)
-
-### 6 - By clicking on a movie we can see its information - Mobile
-
-![modalMobile](https://user-images.githubusercontent.com/77650278/191383706-8afcc8f6-9464-4175-8aaa-56c58abd4fd8.png)
+![newPost](https://user-images.githubusercontent.com/77650278/197030080-0bf97f11-64c7-48e9-833e-00d697b06be8.png)
+![newPostMobile](https://user-images.githubusercontent.com/77650278/197030095-716262b9-d385-4092-83e0-220747db6855.png)
 
 
 ## Links
   - Deploy on Netlify: https://skenai.netlify.app/
-  - Repository: https://github.com/savioros/kenai-streaming
+  - Repository: https://github.com/savioros/rockr-blog
 
   ## Versioning
 
