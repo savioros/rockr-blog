@@ -24,11 +24,13 @@ Here are the technologies used in this project.
 * API Coderockr
 
 ## Project description
-This is a project provided by Coderockr. With a design available, I built a blog using modern development tools like TypeScript, ReactJS, Axios, Styled Components and others.
+This is a project provided by Coderockr. With the design provided, i built a full responsive blog using modern development tools. The folder architecture was made aiming for the greatest possible scalability.
 
-On the homepage you can see a lot of cool posts and in addition it has Infinite Scroll.
+On the homepage you can see a lot of cool posts and in addition it has Infinite Scroll. Clicking on any post will redirect you to a page with full details.
 
-The folder architecture was made aiming for the greatest possible scalability.
+We also have a contact modal and the best thing is that it actually works by sending emails. To do this I used EmailJS.
+
+Finally, we have a page where the user can create new posts.
 
 ## Project images
 
