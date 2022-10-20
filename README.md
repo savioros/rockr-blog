@@ -56,7 +56,7 @@ Finally, we have a page where the user can create new posts.
 
 
 ## Links
-  - Deploy on Netlify: https://skenai.netlify.app/
+  - Deploy on Netlify: https://srockrblog.netlify.app/
   - Repository: https://github.com/savioros/rockr-blog
 
   ## Versioning
