@@ -26,6 +26,8 @@ Here are the technologies used in this project.
 ## Project description
 This is a project provided by Coderockr. With a design available, I built a blog using modern development tools like TypeScript, ReactJS, Axios, Styled Components and others.
 
+This is a project provided by Coderockr. With a design available, I built a blog using modern development tools. On the home page you can see several cool posts and also with Infinite Scroll.
+
 The folder architecture was made aiming for the greatest possible scalability.
 
 ## Project images
