@@ -11,7 +11,7 @@ import * as yup from "yup";
 import { IFormInputs } from '../../types/types'
 
 const schema = yup.object({
-    title: yup.string().required('Enter a valid name'),
+    title: yup.string().required('Enter a title'),
     author: yup.string().required('Enter author name'),
     imageUrl: yup.string().required('Enter a valid imageUrl'),
     article: yup.string().required('Write a comment'),

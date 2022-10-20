@@ -7,4 +7,5 @@ export const Container = styled.footer`
     background-color: var(--black-color);
     color: var(--white-color);
     margin-top: 120px;
+    line-height: 80px;
 `
